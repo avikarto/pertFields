@@ -3,8 +3,10 @@
 import fieldsModule
 from plottingModule import *
 from constants import *
-%matplotlib inline
+#  %matplotlib inline
 
 # plot3dWaist(3)
 # plot2dWaist(0)
 # plot1dWaist(3)
+
+a = 1 + 5
