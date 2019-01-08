@@ -1,4 +1,4 @@
-A program which calculates the complex EM fields of an ultrashort tightly-focused Laguerre-Gaussian vortex beam of arbitrary orbital and radial modes in the perturbative regime.  This code is designed to calculate said fields to arbitrary perturbative order, as developed and generalizaed in our two related papers:
+A program which calculates the time-domain complex EM fields of an ultrashort tightly-focused Laguerre-Gaussian vortex beam of arbitrary orbital and radial modes in the perturbative regime.  This code is designed to calculate said fields to arbitrary perturbative order, as developed and generalizaed in our two related papers:
 
 Development of the perturbative method...
 -Perturbative representation of ultrashort nonparaxial elegant Laguerre-Gaussian fields
