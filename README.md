@@ -9,3 +9,5 @@ A program which calculates the time-domain complex EM fields of an ultrashort ti
 
 	Generalized Description of a Perturbative Nonparaxial Elegant Laguerre-Gaussian Phasor for Ultrashort Pulses in the Time Domain
 	(Manuscript in preparation)
+
+This code is written in Python, and designed for use in the Atom IDE with the Hydrogen package as a Jupyter environment.
