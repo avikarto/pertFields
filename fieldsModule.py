@@ -59,13 +59,13 @@ def makeFields(x, y, z, t):
     d2UdbdT = 0.0j
 
     for iAlpha in range(0, pertOrder+1):
-        term_U = 0.0j
-        term_dUdT = 0.0j
-        term_dUdxi = 0.0j
-        term_d2Udxi2 = 0.0j
-        term_d2UdT2 = 0.0j
-        term_d2UdxidT = 0.0j
         for iDelta in range(iAlpha, 2*iAlpha+1):
+            term_U = 0.0j
+            term_dUdT = 0.0j
+            term_dUdxi = 0.0j
+            term_d2Udxi2 = 0.0j
+            term_d2UdT2 = 0.0j
+            term_d2UdxidT = 0.0j
             aReal = float(iAlpha)
             for iJay in range(0, nn+iDelta+1):
                 jReal = float(iJay)
@@ -86,7 +86,7 @@ def makeFields(x, y, z, t):
                 term_dUdxi += ( cADs[iAlpha][iDelta][iJay]*jReal*xi**(iJay-1)*bigT**(-gamma-1.0+aReal) )
                 term_d2Udxi2 += ( cADs[iAlpha][iDelta][iJay]*jReal*(jReal-1.0)*xi**(iJay-2)*bigT**(-gamma-1.0+aReal) )
                 term_d2UdxidT += ( cADs[iAlpha][iDelta][iJay]*jReal*xi**(iJay-1)*bigT**(-gamma-2.0+aReal)*(-gamma-1.0+aReal) )
-            #
+            # for i Jay
         ec2ba = (epsilonc2/beta)**iAlpha
         ceb[0] += ( term_U*ec2ba )
         dUdT += ( term_dUdT*ec2ba )
@@ -97,6 +97,7 @@ def makeFields(x, y, z, t):
         d2UdxidT += ( term_d2UdxidT*ec2ba )
         d2Udxidb += ( term_dUdxi*(-iAlpha*ec2ba/beta) )
         d2UdbdT += ( term_dUdT*(-iAlpha*ec2ba/beta) )
+        # for iDelta
     # for iAlpha
 
     ceb[0] *= lambda_nm
