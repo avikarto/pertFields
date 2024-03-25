@@ -8,6 +8,14 @@ A program which calculates the time-domain complex EM fields of an ultrashort ti
 2) Generalization to arbitrary perturbative order
 
 	Generalized Description of a Perturbative Nonparaxial Elegant Laguerre-Gaussian Phasor for Ultrashort Pulses in the Time Domain
-	(Manuscript in preparation)
+	(https://journals.aps.org/pra/pdf/10.1103/PhysRevA.99.053832)
 
-This code is written in Python, and designed for use in the Atom IDE with the Hydrogen package as a Jupyter environment.
+
+Configuration:
+- Upgrade pip and supporting install tools: `pip install -U pip setuptools wheel`
+- Install project requirements: `pip install -r requirements.txt`
+- In constants.py, you can set various beam parameters such as the polarization, LG mode, spot size, and inital phase
+
+Execution:
+- Generate visualization in `pert_fields.ipynb`
+- Generate exact fields at a particular space-time coordinate through `fieldsModule.makeFields`

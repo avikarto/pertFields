@@ -1,0 +1,30 @@
+[tool.ruff]
+# See details of ruff config here: https://beta.ruff.rs/docs/configuration/
+
+# Enable these rule sets:
+# 	Pyflakes `E` and `F` codes by default
+# 	flake8 rules `B`, `BLE`, `INP`, `ARG`.
+lint.select = ["E", "F", "B", "BLE", "INP", "ARG"]
+lint.ignore = []
+
+# Exclude a variety of directories from linting checks
+exclude = [
+	".git",
+	".ruff_cache",
+	"venv",
+	"__pypackages__",
+	"__pycache__",
+	".pytest_cache"
+]
+
+# Exclude files ignored by gitignore
+respect-gitignore = true
+
+# Extend default line length
+line-length = 100
+
+# Allow unused variables when underscore-prefixed.
+lint.dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.per-file-ignores]
+"**/test_*.py" = ["INP001"]  # unit tests will never be imported
